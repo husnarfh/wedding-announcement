@@ -69,7 +69,7 @@ export default function FirstPage() {
                 {
                     page === 0 && (
                         <article id="page-0">
-                            <div className="front page-1 w-screen text-center justify-between flex flex-col p-6">
+                            <div className="front page-1 w-screen h-screen text-center justify-between flex flex-col p-6">
                                 <p style={{ letterSpacing: '5px'}}>TAMI & SYARIF</p>
 
                                 <p className={peaches.className + ' text-7xl text-animation'}>We&apos;re <br></br> Getting <br></br> Married</p>
@@ -93,8 +93,8 @@ export default function FirstPage() {
                 {
                     page === 1 && (
                         <article id="page-1">
-                            <div className={'front page-2 text-center p-6 w-screen content-center'}>
-                                <div className="text-center flex flex-col justify-between" style={{ height: '-webkit-fill-available'}}>
+                            <div className={'front page-2 h-screen text-center p-6 w-screen content-center'}>
+                                <div className="text-center flex flex-col justify-between py-12" style={{ height: '-webkit-fill-available'}}>
                                     <h1 className={peaches.className + ' text-7xl pb-3 text-animation'}>We Got Married</h1>
                                     <p className="text-animation">Dengan segala kesederhaan dan dikelilingi keluarga dan sahabat terdekat kami. 
                                     Telah berlangsung pernikahan kami <br /> pada <b>28 Agustus 2024</b> di <b>Haurngombong, Pamulihan, Sumedang</b>. <br />
@@ -133,7 +133,7 @@ export default function FirstPage() {
                 {
                     page === 2 && (
                         <article id="page-2">
-                            <div className="front page-3 p-6 w-screen justify-between flex flex-col">
+                            <div className="front page-3 p-6 w-screen h-screen justify-between flex flex-col">
                                 <p className="text-left">OUR GALLERY</p>
                                 <div className="img-collect">
                                     <img src="../foto2.jpg" className="img-style" />
@@ -165,7 +165,7 @@ export default function FirstPage() {
                 {
                     page === 3 && (
                         <article id="page-3">
-                            <div className="front page-3 p-6 w-screen justify-between flex flex-col">
+                            <div className="front page-3 p-6 w-screen h-screen justify-between flex flex-col">
                                 <p className="text-left">OUR GALLERY</p>
                                 <div className="img-collect">
                                     <img src="../foto4.jpg" className="img-style" />
@@ -197,7 +197,7 @@ export default function FirstPage() {
                 {
                     page === 4 && (
                         <article id="page-4">
-                            <div className="front page-3 p-6 w-screen justify-between flex flex-col">
+                            <div className="front page-3 p-6 w-screen h-screen justify-between flex flex-col">
                                 <p className="text-left">OUR GALLERY</p>
                                 <div className="img-collect">
                                     <img src="../foto10.jpg" className="img-style" />
