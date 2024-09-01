@@ -63,7 +63,7 @@ export default function FirstPage() {
                 <a href="#page-4"></a>
             </section>
 
-            <audio id="audio" src="../wedding.mp3"></audio>
+            <audio id="audio" src="../muara.mp3"></audio>
 
             <main className="flex flex-row relative">
                 {
@@ -94,11 +94,11 @@ export default function FirstPage() {
                     page === 1 && (
                         <article id="page-1">
                             <div className={'front page-2 h-screen text-center p-6 w-screen content-center'}>
-                                <div className="text-center flex flex-col justify-between py-12">
+                                <div className="text-center flex flex-col h-full justify-between py-12">
                                     <h1 className={peaches.className + ' text-7xl pb-3 text-animation'}>We Got Married</h1>
                                     <p className="text-animation">Dengan segala kesederhaan dan dikelilingi keluarga dan sahabat terdekat kami. 
                                     Telah berlangsung pernikahan kami <br /> pada <b>28 Agustus 2024</b> di <b>Haurngombong, Pamulihan, Sumedang</b>. <br />
-                                    Terimakasih atas segenap doa dan dukungannya untuk kami
+                                    Kami mohon dengan segenap Ridho dan Doa tercurahkan untuk kami, agar tercapai pernikahan yg Sakinah Mawaddah wa Rahmah.
                                     </p>
                                     <p style={{
                                         fontFamily: 'monospace', fontStyle: 'italic'
@@ -138,7 +138,7 @@ export default function FirstPage() {
                                 <div className="img-collect">
                                     <img src="../foto2.jpg" className="img-style" />
                                     <img src="../foto1.jpg" className="img-style" />
-                                    <img src="../foto9.jpg" className="img-style" />
+                                    <img src="../foto13.jpeg" className="img-style" />
                                 </div>
                                 <p className="text-right mb-5">#berTAMaSYA</p>
 
