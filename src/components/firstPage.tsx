@@ -65,7 +65,7 @@ export default function FirstPage() {
 
             <audio id="audio" src="../wedding.mp3"></audio>
 
-            <main className="flex flex-row">
+            <main className="flex flex-row relative">
                 {
                     page === 0 && (
                         <article id="page-0">
