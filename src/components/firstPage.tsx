@@ -8,10 +8,12 @@ const peaches = localFont({ src: '../../public/peaches.ttf' })
 
 export default function FirstPage() {
     const [page, setPage] = useState(0)
-    const touchStartX = 0
-    const touchStartY = 0
-    const touchendX = 0
-    const touchendY = 0
+    let myAudio = document.querySelector('#audio') as HTMLAudioElement
+    if(myAudio) {
+        myAudio.play()
+        myAudio.volume = 0.7
+        myAudio.loop = true
+    }
 
     function goNextPage() {
         if (typeof document !== 'undefined') {
@@ -27,24 +29,6 @@ export default function FirstPage() {
     function goPrevPage() {
         if(page >= 0) {
             setPage(page - 1);
-            // switch(currentLocation) {
-            //     case 2:
-            //         closeBook(true);
-            //         paper1.classList.remove("flipped");
-            //         paper1.style.zIndex = 3;
-            //         break;
-            //     case 3:
-            //         paper2.classList.remove("flipped");
-            //         paper2.style.zIndex = 2;
-            //         break;
-            //     case 4:
-            //         openBook();
-            //         paper3.classList.remove("flipped");
-            //         paper3.style.zIndex = 1;
-            //         break;
-            //     default:
-            //         throw new Error("unkown state");
-            // }
         }
     }
 
@@ -79,6 +63,8 @@ export default function FirstPage() {
                 <a href="#page-4"></a>
             </section>
 
+            <audio id="audio" src="../wedding.mp3"></audio>
+
             <main className="flex flex-row">
                 {
                     page === 0 && (
@@ -86,7 +72,7 @@ export default function FirstPage() {
                             <div className="front page-1 w-screen text-center justify-between flex flex-col p-6">
                                 <p style={{ letterSpacing: '5px'}}>TAMI & SYARIF</p>
 
-                                <p className={peaches.className + ' text-7xl'}>We&apos;re <br></br> Getting <br></br> Married</p>
+                                <p className={peaches.className + ' text-7xl text-animation'}>We&apos;re <br></br> Getting <br></br> Married</p>
 
                                 <p style={{ letterSpacing: '5px'}}>28 AGUSTUS 2024</p>
                             </div>
@@ -108,16 +94,16 @@ export default function FirstPage() {
                     page === 1 && (
                         <article id="page-1">
                             <div className={'front page-2 text-center p-6 w-screen content-center'}>
-                                <div className="text-center">
-                                    <h1 className={peaches.className + ' text-7xl pb-3'}>We Got Married</h1>
-                                    <p className="py-5">Dengan segala kesederhaan dan dikelilingi keluarga dan sahabat terdekat kami. 
+                                <div className="text-center flex flex-col justify-between" style={{ height: '-webkit-fill-available'}}>
+                                    <h1 className={peaches.className + ' text-7xl pb-3 text-animation'}>We Got Married</h1>
+                                    <p className="text-animation">Dengan segala kesederhaan dan dikelilingi keluarga dan sahabat terdekat kami. 
                                     Telah berlangsung pernikahan kami <br /> pada <b>28 Agustus 2024</b> di <b>Haurngombong, Pamulihan, Sumedang</b>. <br />
                                     Terimakasih atas segenap doa dan dukungannya untuk kami
                                     </p>
                                     <p style={{
                                         fontFamily: 'monospace', fontStyle: 'italic'
-                                    }} className="mt-3">"A great marriage isn't something that just happens; it's something that must be created." - Fawn Weaver</p>
-                                    <div className="py-16">
+                                    }} className="text-animation">"A great marriage isn't something that just happens; it's something that must be created." - Fawn Weaver</p>
+                                    <div className="pt-16 text-animation">
                                         <p className="">Yang berbahagia</p>
                                         <p className="" style={{ letterSpacing: '4px'}}>TAMI & SYARIF</p>
                                     </div>
@@ -129,7 +115,6 @@ export default function FirstPage() {
                                     src="../icon-arrow-2.png"
                                     width='40'
                                     height='40'
-                                    // style={{filter: 'invert(1)'}}
                                 />
                                 </div>
                                 <div className="absolute bottom-0 right-0 tex-black" onClick={goNextPage}>
@@ -138,7 +123,6 @@ export default function FirstPage() {
                                     src="../icon-arrow.png"
                                     width='40'
                                     height='40'
-                                    // style={{filter: 'invert(1)'}}
                                 />
                                 </div>
                             </div>
@@ -151,7 +135,12 @@ export default function FirstPage() {
                         <article id="page-2">
                             <div className="front page-3 p-6 w-screen justify-between flex flex-col">
                                 <p className="text-left">OUR GALLERY</p>
-                                <p className="text-right mb-5">#hastag</p>
+                                <div className="img-collect">
+                                    <img src="../foto2.jpg" className="img-style" />
+                                    <img src="../foto1.jpg" className="img-style" />
+                                    <img src="../foto9.jpg" className="img-style" />
+                                </div>
+                                <p className="text-right mb-5">#berTAMaSYA</p>
 
                                 <div className="absolute bottom-0 left-0 text-black" onClick={goPrevPage}>
                                 <img
@@ -159,7 +148,6 @@ export default function FirstPage() {
                                     src="../icon-arrow-2.png"
                                     width='40'
                                     height='40'
-                                    // style={{filter: 'invert(1)'}}
                                 />
                                 </div>
                                 <div className="absolute bottom-0 right-0 tex-black" onClick={goNextPage}>
@@ -168,7 +156,6 @@ export default function FirstPage() {
                                     src="../icon-arrow.png"
                                     width='40'
                                     height='40'
-                                    // style={{filter: 'invert(1)'}}
                                 />
                                 </div>
                             </div>
@@ -180,7 +167,12 @@ export default function FirstPage() {
                         <article id="page-3">
                             <div className="front page-3 p-6 w-screen justify-between flex flex-col">
                                 <p className="text-left">OUR GALLERY</p>
-                                <p className="text-right mb-5">#hastag</p>
+                                <div className="img-collect">
+                                    <img src="../foto4.jpg" className="img-style" />
+                                    <img src="../foto7.jpg" className="img-style" />
+                                    <img src="../foto5.jpg" className="img-style" />
+                                </div>
+                                <p className="text-right mb-5">#berTAMaSYA</p>
 
                                 <div className="absolute bottom-0 left-0 text-black" onClick={goPrevPage}>
                                 <img
@@ -188,7 +180,6 @@ export default function FirstPage() {
                                     src="../icon-arrow-2.png"
                                     width='40'
                                     height='40'
-                                    // style={{filter: 'invert(1)'}}
                                 />
                                 </div>
                                 <div className="absolute bottom-0 right-0 tex-black" onClick={goNextPage}>
@@ -197,7 +188,6 @@ export default function FirstPage() {
                                     src="../icon-arrow.png"
                                     width='40'
                                     height='40'
-                                    // style={{filter: 'invert(1)'}}
                                 />
                                 </div>
                             </div>
@@ -209,7 +199,12 @@ export default function FirstPage() {
                         <article id="page-4">
                             <div className="front page-3 p-6 w-screen justify-between flex flex-col">
                                 <p className="text-left">OUR GALLERY</p>
-                                <p className="text-right mb-5">#hastag</p>
+                                <div className="img-collect">
+                                    <img src="../foto10.jpg" className="img-style" />
+                                    <img src="../foto12.jpg" className="img-style" style={{ objectPosition: 'bottom'}} />
+                                    <img src="../foto11.jpg" className="img-style" />
+                                </div>
+                                <p className="text-right mb-5">#berTAMaSYA</p>
 
                                 <div className="absolute bottom-0 left-0 text-black" onClick={goPrevPage}>
                                 <img
