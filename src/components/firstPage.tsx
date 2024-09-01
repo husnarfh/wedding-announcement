@@ -226,10 +226,10 @@ export default function FirstPage() {
                 {
                     page === 5 && (
                         <article id="page-5">
-                            <div className="front page-4 w-screen h-screen text-center justify-center flex flex-col p-6">
+                            <div className="front page-4 w-screen h-screen text-center justify-end flex flex-col p-6">
                                 <p style={{
                                         fontFamily: 'monospace', fontStyle: 'italic'
-                                    }} className="text-animation text-base">"A great marriage isn't something that just happens; it's something that must be created." <br /><br /> - Fawn Weaver</p>
+                                    }} className="text-animation text-base mb-5">"A great marriage isn't something that just happens; it's something that must be created." <br /><br /> - Fawn Weaver</p>
                             </div>
 
                             <div className="absolute bottom-0 left-0" onClick={goPrevPage}>
