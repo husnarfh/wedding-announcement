@@ -94,7 +94,7 @@ export default function FirstPage() {
                     page === 1 && (
                         <article id="page-1">
                             <div className={'front page-2 h-screen text-center p-6 w-screen content-center'}>
-                                <div className="text-center flex flex-col justify-between py-12" style={{ height: '-webkit-fill-available'}}>
+                                <div className="text-center flex flex-col justify-between py-12">
                                     <h1 className={peaches.className + ' text-7xl pb-3 text-animation'}>We Got Married</h1>
                                     <p className="text-animation">Dengan segala kesederhaan dan dikelilingi keluarga dan sahabat terdekat kami. 
                                     Telah berlangsung pernikahan kami <br /> pada <b>28 Agustus 2024</b> di <b>Haurngombong, Pamulihan, Sumedang</b>. <br />
