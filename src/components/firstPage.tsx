@@ -17,7 +17,7 @@ export default function FirstPage() {
 
     function goNextPage() {
         if (typeof document !== 'undefined') {
-            if(page < 4) {
+            if(page < 5) {
                 setPage(page + 1);
             }
             // const elements = document.getElementsByClassName('page-2')[0] as HTMLElement;
@@ -87,7 +87,6 @@ export default function FirstPage() {
                                 />
                             </div>
                         </article>
-
                     )
                 }
                 {
@@ -100,9 +99,7 @@ export default function FirstPage() {
                                     Telah berlangsung pernikahan kami <br /> pada <b>28 Agustus 2024</b> di <b>Haurngombong, Pamulihan, Sumedang</b>. <br />
                                     Kami mohon dengan segenap Ridho dan Doa tercurahkan untuk kami, agar tercapai pernikahan yg Sakinah Mawaddah wa Rahmah.
                                     </p>
-                                    <p style={{
-                                        fontFamily: 'monospace', fontStyle: 'italic'
-                                    }} className="text-animation">"A great marriage isn't something that just happens; it's something that must be created." - Fawn Weaver</p>
+                                   
                                     <div className="pt-16 text-animation">
                                         <p className="">Yang berbahagia</p>
                                         <p className="" style={{ letterSpacing: '4px'}}>TAMI & SYARIF</p>
@@ -207,14 +204,42 @@ export default function FirstPage() {
                                 <p className="text-right mb-5">#berTAMaSYA</p>
 
                                 <div className="absolute bottom-0 left-0 text-black" onClick={goPrevPage}>
+                                    <img
+                                        rel="icon"
+                                        src="../icon-arrow-2.png"
+                                        width='40'
+                                        height='40'
+                                    />
+                                </div>
+                                <div className="absolute bottom-0 right-0 tex-black" onClick={goNextPage}>
+                                    <img
+                                        rel="icon"
+                                        src="../icon-arrow.png"
+                                        width='40'
+                                        height='40'
+                                    />
+                                </div>
+                            </div>
+                        </article>
+                    )
+                }
+                {
+                    page === 5 && (
+                        <article id="page-5">
+                            <div className="front page-4 w-screen h-screen text-center justify-center flex flex-col p-6">
+                                <p style={{
+                                        fontFamily: 'monospace', fontStyle: 'italic'
+                                    }} className="text-animation text-base">"A great marriage isn't something that just happens; it's something that must be created." <br /><br /> - Fawn Weaver</p>
+                            </div>
+
+                            <div className="absolute bottom-0 left-0" onClick={goPrevPage}>
                                 <img
                                     rel="icon"
                                     src="../icon-arrow-2.png"
                                     width='40'
                                     height='40'
-                                    // style={{filter: 'invert(1)'}}
+                                    style={{filter: 'invert(1)'}}
                                 />
-                                </div>
                             </div>
                         </article>
                     )
